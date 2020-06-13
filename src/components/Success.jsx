@@ -4,9 +4,9 @@ const Success = (params) => {
     return (
         <>
             <h1>Success</h1>
-            <p>
+            <label>
                 Thanks For Subscribing, Please check your email for confirmation!
-            </p>
+            </label>
         </>
     )
 }

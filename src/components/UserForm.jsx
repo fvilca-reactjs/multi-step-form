@@ -30,10 +30,10 @@ const UserForm = () => {
     ]
 
     return (
-        <>
+        <section>
             <h1> Register Data</h1>
             {array_ui[step]}
-        </>
+        </section>
 
     )
 }
