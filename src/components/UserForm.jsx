@@ -16,16 +16,15 @@ const UserForm = () => {
     const nextStep = () => { setStep(step + 1) }
     const prevStep = () => { setStep(step - 1) }
     const handleChange = (evt) => {
-        setUserData(
-            {
-                [evt.target.name]: evt.target.value
-            }
-        )
+        evt.preventDefault()
+        console.log(evt.target.value)
+        setUserData( { ...userData, [evt.target.name]: evt.target.value } )
+        console.log(userData)
     }
 
     const array_ui = [
-        <FormUserDetail step={step} nextStep={nextStep} handleChange {...userData} />,
-        <FormPersonalDetail step={step} nextStep={nextStep} prevStep={prevStep} {...userData} />,
+        <FormUserDetail step={step} nextStep={nextStep} handleChange={handleChange} {...userData} />,
+        <FormPersonalDetail step={step} nextStep={nextStep} prevStep={prevStep}  handleChange={handleChange} {...userData} />,
         <Confirm step={step} nextStep={nextStep} prevStep={prevStep} {...userData} />,
         <Success />
     ]
