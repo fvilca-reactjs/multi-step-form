@@ -1,7 +1,6 @@
 import React from 'react'
 
-const  Confirm = ({ step, firstName, lastName, email, occupation,city, bio,nextStep, prevStep }) => {
-    console.log(nextStep)
+const  Confirm = ({ firstName, lastName, email, occupation,city, bio,nextStep, prevStep }) => {
     return (
         <>
             <h1>Confirm</h1>
